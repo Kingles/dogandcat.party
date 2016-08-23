@@ -51,12 +51,11 @@
 
 					var button = document.createElement( 'div' );
 					button.id = 'edit';
-					button.textContent = 'EDIT';
+					button.textContent = 'PLAY';
 					button.addEventListener( 'click', function ( event ) {
-
-						var url = location.href.split( '/' ).slice( 0, - 1 ).join( '/' );
-						window.open( 'http://threejs.org/editor/#file=' + url + '/app.json' );
-
+						console.log("play audio..");
+						var audio = document.getElementById('audio');
+						audio.play(); // This will silently fail
 					}, false );
 					document.body.appendChild( button );
 
@@ -69,5 +68,6 @@
 			} );
 
 		</script>
+		<audio id="audio" src="audio/catanddogparty.m4a" />
 	</body>
 </html>
